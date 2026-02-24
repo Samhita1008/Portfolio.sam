@@ -23,3 +23,15 @@ function typeText(element, text, speed, callback) {
 typeText(heading, headingText, 100, () => {
   typeText(subheading, subheadingText, 50);
 });
+// Hamburger functionality
+const hamburger = document.querySelector(".hamburger");
+const sidePanel = document.getElementById("sidePanel");
+const closeBtn = document.getElementById("closeBtn");
+
+hamburger.addEventListener("click", () => {
+  sidePanel.style.left = "0";
+});
+
+closeBtn.addEventListener("click", () => {
+  sidePanel.style.left = "-250px";
+});
