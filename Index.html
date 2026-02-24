@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samhita Portfolio</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background-color: #0d0d0d;
+    color: #00ff00;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #typing {
+    white-space: pre-wrap;
+    font-size: 1.5rem;
+  }
+
+  .cursor {
+    display: inline-block;
+    background-color: #00ff00;
+    width: 10px;
+    animation: blink 0.8s infinite;
+    margin-left: 2px;
+  }
+
+  @keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div id="typing"></div><div class="cursor"></div>
+
+<script>
+const lines = [
+  "Hi, it's me Samhita.",
+  "Cybersecurity enthusiast building secure systems with an offensive mindset."
+];
+
+let i = 0;
+let j = 0;
+let typingDiv = document.getElementById('typing');
+
+function typeLine() {
+  if(i < lines.length) {
+    if(j < lines[i].length) {
+      typingDiv.innerHTML += lines[i][j];
+      j++;
+      setTimeout(typeLine, 100); // typing speed
+    } else {
+      typingDiv.innerHTML += "\n";
+      j = 0;
+      i++;
+      setTimeout(typeLine, 500); // pause between lines
+    }
+  }
+}
+
+typeLine();
+</script>
+
+</body>
+</html>
