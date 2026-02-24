@@ -30,3 +30,32 @@ h3 {
   font-size: 28px;
   cursor: pointer;
 }
+.side-panel {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #111;
+  padding-top: 60px;
+  transition: 0.3s;
+}
+
+.side-panel a {
+  display: block;
+  padding: 15px 25px;
+  color: #00ff00;
+  text-decoration: none;
+}
+
+.side-panel a:hover {
+  background-color: #1a1a1a;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
