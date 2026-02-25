@@ -59,11 +59,3 @@ h3 {
   font-size: 28px;
   cursor: pointer;
 }
-.content-section {
-  min-height: 100vh;
-  padding: 100px 60px;
-}
-
-html {
-  scroll-behavior: smooth;
-}
