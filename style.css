@@ -97,3 +97,29 @@ h3 {
 .about-card h3 {
   margin-top: 0;
 }
+.about-left h2 {
+  margin-top: 35px;
+  font-size: 1.4rem;
+  color: #00ff88;
+  transition: 0.3s ease;
+}
+
+.about-left h2:hover {
+  text-shadow: 0 0 8px #00ff88;
+}
+.about-container {
+  min-height: 100vh;
+  display: flex;
+  padding: 120px 80px;
+  gap: 60px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
