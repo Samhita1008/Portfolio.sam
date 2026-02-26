@@ -91,6 +91,18 @@
     </div>
   </section>
 
-  <script src="type.js"></script>
+  <script>
+  const hamburger = document.querySelector(".hamburger");
+  const sidePanel = document.getElementById("sidePanel");
+  const closeBtn = document.getElementById("closeBtn");
+
+  hamburger.onclick = function () {
+    sidePanel.style.left = "0";
+  };
+
+  closeBtn.onclick = function () {
+    sidePanel.style.left = "-250px";
+  };
+  </script>
 </body>
 </html>
