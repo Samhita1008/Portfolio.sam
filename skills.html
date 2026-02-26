@@ -216,6 +216,22 @@ function toggleSkill(header) {
   skillItem.classList.toggle("active");
 }
   </script>
+<script>
+const skillCategories = document.querySelectorAll('.skill-category');
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, index) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add("show");
+      }, index * 300);
+    }
+  });
+}, { threshold: 0.2 });
+
+skillCategories.forEach(category => {
+  observer.observe(category);
+});
+</script>
 </body>
 </html>
