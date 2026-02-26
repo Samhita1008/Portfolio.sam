@@ -23,61 +23,193 @@
 
     <div class="skills-container">
 
+      <!-- PROGRAMMING -->
       <div class="skill-category">
         <h3>Programming</h3>
 
         <div class="skill-item">
-          <span>Python</span>
-          <div class="skill-bar"><div class="skill-fill python"></div></div>
+          <div class="skill-header" onclick="toggleSkill(this)">
+            <span>Python</span>
+            <span class="arrow">+</span>
+          </div>
+
+          <p class="skill-desc">
+            Strong foundation in logic building, scripting and problem solving.
+          </p>
+
+          <div class="skill-bar">
+            <div class="skill-fill python"></div>
+          </div>
+
+          <div class="skill-details">
+            <ul>
+              <li>Built student & library management systems</li>
+              <li>Worked on dictionary/set based real-time apps</li>
+              <li>Practiced DSA fundamentals</li>
+            </ul>
+
+            <div class="skill-links">
+              <a href="#">GitHub</a>
+              <a href="#">Notes</a>
+            </div>
+          </div>
         </div>
 
-        <div class="skill-item">
-          <span>C / C++</span>
-          <div class="skill-bar"><div class="skill-fill cpp"></div></div>
-        </div>
 
         <div class="skill-item">
-          <span>HTML & CSS</span>
-          <div class="skill-bar"><div class="skill-fill html"></div></div>
+          <div class="skill-header" onclick="toggleSkill(this)">
+            <span>C / C++</span>
+            <span class="arrow">+</span>
+          </div>
+
+          <p class="skill-desc">
+            Learning system-level programming and memory concepts.
+          </p>
+
+          <div class="skill-bar">
+            <div class="skill-fill cpp"></div>
+          </div>
+
+          <div class="skill-details">
+            <ul>
+              <li>Practiced pointers and structures</li>
+              <li>Implemented sorting and searching algorithms</li>
+            </ul>
+
+            <div class="skill-links">
+              <a href="#">GitHub</a>
+            </div>
+          </div>
         </div>
+
       </div>
 
+
+      <!-- SYSTEMS -->
       <div class="skill-category">
         <h3>Systems & Tools</h3>
 
         <div class="skill-item">
-          <span>Linux</span>
-          <div class="skill-bar"><div class="skill-fill linux"></div></div>
+          <div class="skill-header" onclick="toggleSkill(this)">
+            <span>Linux</span>
+            <span class="arrow">+</span>
+          </div>
+
+          <p class="skill-desc">
+            Advanced understanding of filesystem, permissions and bash scripting.
+          </p>
+
+          <div class="skill-bar">
+            <div class="skill-fill linux"></div>
+          </div>
+
+          <div class="skill-details">
+            <ul>
+              <li>Created automation scripts</li>
+              <li>Worked with cron jobs</li>
+              <li>Log analysis and monitoring scripts</li>
+            </ul>
+
+            <div class="skill-links">
+              <a href="#">GitHub</a>
+              <a href="#">Screenshots</a>
+              <a href="#">Write-up</a>
+            </div>
+          </div>
         </div>
 
-        <div class="skill-item">
-          <span>Git & GitHub</span>
-          <div class="skill-bar"><div class="skill-fill git"></div></div>
-        </div>
 
         <div class="skill-item">
-          <span>MySQL</span>
-          <div class="skill-bar"><div class="skill-fill mysql"></div></div>
+          <div class="skill-header" onclick="toggleSkill(this)">
+            <span>Git & GitHub</span>
+            <span class="arrow">+</span>
+          </div>
+
+          <p class="skill-desc">
+            Version control, branching, pull requests and collaboration.
+          </p>
+
+          <div class="skill-bar">
+            <div class="skill-fill git"></div>
+          </div>
+
+          <div class="skill-details">
+            <ul>
+              <li>Worked with branching & merging</li>
+              <li>Open-source contribution basics</li>
+            </ul>
+
+            <div class="skill-links">
+              <a href="#">Profile</a>
+            </div>
+          </div>
         </div>
+
       </div>
 
+
+      <!-- SECURITY -->
       <div class="skill-category">
         <h3>Security</h3>
 
         <div class="skill-item">
-          <span>Networking Basics</span>
-          <div class="skill-bar"><div class="skill-fill net"></div></div>
+          <div class="skill-header" onclick="toggleSkill(this)">
+            <span>Networking Basics</span>
+            <span class="arrow">+</span>
+          </div>
+
+          <p class="skill-desc">
+            Understanding TCP/IP, ports, protocols and packet flow.
+          </p>
+
+          <div class="skill-bar">
+            <div class="skill-fill net"></div>
+          </div>
+
+          <div class="skill-details">
+            <ul>
+              <li>Studied OSI & TCP/IP model</li>
+              <li>Basic port scanning concepts</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="skill-item">
-          <span>OWASP Concepts</span>
-          <div class="skill-bar"><div class="skill-fill owasp"></div></div>
-        </div>
       </div>
 
     </div>
   </section>
 
 
+  <!-- TOGGLE SCRIPT -->
+  <script>
+    function toggleSkill(header) {
+      const skillItem = header.parentElement;
+      skillItem.classList.toggle("active");
+    }
+  </script>
+
+  <!-- SKILL BAR ANIMATION -->
+  <script>
+    const skillSection = document.querySelector('.skills-section');
+    const skillBars = document.querySelectorAll('.skill-fill');
+
+    function showSkills() {
+      const sectionPos = skillSection.getBoundingClientRect().top;
+      const screenPos = window.innerHeight / 1.3;
+
+      if (sectionPos < screenPos) {
+        skillBars.forEach(bar => {
+          if (bar.classList.contains('python')) bar.style.width = '85%';
+          if (bar.classList.contains('cpp')) bar.style.width = '70%';
+          if (bar.classList.contains('linux')) bar.style.width = '75%';
+          if (bar.classList.contains('git')) bar.style.width = '70%';
+          if (bar.classList.contains('net')) bar.style.width = '60%';
+        });
+      }
+    }
+
+    window.addEventListener('scroll', showSkills);
+  </script>
+
 </body>
-            </html>
+</html>
