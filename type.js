@@ -1,13 +1,14 @@
+// ---------- TYPING EFFECT (ONLY IF ELEMENT EXISTS) ----------
 const heading = document.getElementById("heading");
 const subheading = document.getElementById("subheading");
 
 if (heading && subheading) {
-
   const headingText = "Hi, I'm Samhita.";
   const subheadingText = "Cybersecurity enthusiast building secure systems.";
 
   function typeText(element, text, speed, callback) {
     let i = 0;
+    element.innerHTML = "";
 
     function typing() {
       if (i < text.length) {
@@ -25,17 +26,22 @@ if (heading && subheading) {
   typeText(heading, headingText, 100, () => {
     typeText(subheading, subheadingText, 50);
   });
-
 }
-// Hamburger functionality
+
+
+// ---------- HAMBURGER MENU ----------
 const hamburger = document.querySelector(".hamburger");
 const sidePanel = document.getElementById("sidePanel");
 const closeBtn = document.getElementById("closeBtn");
 
-hamburger.addEventListener("click", () => {
-  sidePanel.style.left = "0";
-});
+if (hamburger && sidePanel && closeBtn) {
 
-closeBtn.addEventListener("click", () => {
-  sidePanel.style.left = "-250px";
-});
+  hamburger.addEventListener("click", () => {
+    sidePanel.style.left = "0";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    sidePanel.style.left = "-250px";
+  });
+
+}
