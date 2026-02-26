@@ -1,47 +1,48 @@
-// ---------- TYPING EFFECT (ONLY IF ELEMENT EXISTS) ----------
-const heading = document.getElementById("heading");
-const subheading = document.getElementById("subheading");
+document.addEventListener("DOMContentLoaded", function () {
 
-if (heading && subheading) {
-  const headingText = "Hi, I'm Samhita.";
-  const subheadingText = "Cybersecurity enthusiast building secure systems.";
+  // ---------- TYPING EFFECT ----------
+  const heading = document.getElementById("heading");
+  const subheading = document.getElementById("subheading");
 
-  function typeText(element, text, speed, callback) {
-    let i = 0;
-    element.innerHTML = "";
+  if (heading && subheading) {
+    const headingText = "Hi, I'm Samhita.";
+    const subheadingText = "Cybersecurity enthusiast building secure systems.";
 
-    function typing() {
-      if (i < text.length) {
-        element.innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typing, speed);
-      } else if (callback) {
-        callback();
+    function typeText(element, text, speed, callback) {
+      let i = 0;
+      element.innerHTML = "";
+
+      function typing() {
+        if (i < text.length) {
+          element.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typing, speed);
+        } else if (callback) {
+          callback();
+        }
       }
+
+      typing();
     }
 
-    typing();
+    typeText(heading, headingText, 100, () => {
+      typeText(subheading, subheadingText, 50);
+    });
   }
 
-  typeText(heading, headingText, 100, () => {
-    typeText(subheading, subheadingText, 50);
-  });
-}
+  // ---------- HAMBURGER ----------
+  const hamburger = document.querySelector(".hamburger");
+  const sidePanel = document.getElementById("sidePanel");
+  const closeBtn = document.getElementById("closeBtn");
 
+  if (hamburger && sidePanel && closeBtn) {
+    hamburger.addEventListener("click", function () {
+      sidePanel.style.left = "0";
+    });
 
-// ---------- HAMBURGER MENU ----------
-const hamburger = document.querySelector(".hamburger");
-const sidePanel = document.getElementById("sidePanel");
-const closeBtn = document.getElementById("closeBtn");
+    closeBtn.addEventListener("click", function () {
+      sidePanel.style.left = "-250px";
+    });
+  }
 
-if (hamburger && sidePanel && closeBtn) {
-
-  hamburger.addEventListener("click", () => {
-    sidePanel.style.left = "0";
-  });
-
-  closeBtn.addEventListener("click", () => {
-    sidePanel.style.left = "-250px";
-  });
-
-}
+});
