@@ -126,3 +126,15 @@ h3 {
 .hamburger {
   z-index: 1000;
   }
+.hamburger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 9999;   /* VERY IMPORTANT */
+}
+
+.side-panel {
+  z-index: 9998;   /* Make sure it sits above content */
+  }
