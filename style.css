@@ -187,3 +187,32 @@ h3 {
   line-height: 1.6;
   color: #ddd;
   }
+.interest-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(255, 182, 219, 0.2);
+  }
+@keyframes fadeSlideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+    }
+.interest-card:nth-child(1) {
+  animation: fadeSlideUp 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.interest-card:nth-child(2) {
+  animation: fadeSlideUp 0.8s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.interest-card:nth-child(3) {
+  animation: fadeSlideUp 0.8s ease forwards;
+  animation-delay: 1.3s;
+}
+
+.interest-card:nth-child(4) {
+  animation: fadeSlideUp 0.8s ease forwards;
+  animation-delay: 1.8s;
+}
