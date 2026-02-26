@@ -295,7 +295,15 @@ h3 {
 .skill-details {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.6s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: max-height 0.6s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
+.skill-item.active .skill-details {
+  max-height: 400px;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .skill-item.active .skill-details {
@@ -304,4 +312,45 @@ h3 {
 
 .skill-item.active .arrow {
   transform: rotate(45deg);
+}
+.skill-item {
+  position: relative;
+  padding: 20px;
+  border-radius: 16px;
+  transition: all 0.4s ease;
+}
+
+.skill-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20px;
+  bottom: 20px;
+  width: 3px;
+  background: transparent;
+  border-radius: 10px;
+  transition: 0.4s ease;
+}
+
+.skill-item.active {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 40px rgba(255, 182, 219, 0.15);
+}
+
+.skill-item.active::before {
+  background: linear-gradient(180deg, #ffb6db, #c084fc);
+}
+.arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.skill-item.active .arrow {
+  transform: rotate(45deg) scale(1.1);
+}
+.skill-item:hover {
+  transform: translateY(-4px);
+}
+.skill-item.active .skill-fill {
+  box-shadow: 0 0 15px rgba(255, 182, 219, 0.5);
 }
