@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const subheading = document.getElementById("subheading");
 
   if (heading && subheading) {
-    const headingText = "Hi, I'm Samhita.";
-    const subheadingText = "Cybersecurity enthusiast building secure systems.";
+    const headingText = "I'm Samhita Tavutu.";
+    const subheadingText = "Linux & Systems developer | Open to freelancing.";
 
     function typeText(element, text, speed, callback) {
       let i = 0;
