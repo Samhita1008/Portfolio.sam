@@ -9,14 +9,16 @@
 <body>
 
   <!-- Hamburger -->
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
+<div class="hamburger" onclick="openMenu()">☰</div>
 
-  <!-- Side Panel -->
-  <div class="side-panel" id="sidePanel">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="skills.html">Skills</a>
-  </div>
+<!-- Side Panel -->
+<div class="side-panel" id="sidePanel">
+  <span class="close-btn" onclick="closeMenu()">×</span>
+
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="skills.html" onclick="closeMenu()">Skills</a>
+</div>
 
   <section class="skills-section">
     <h2 class="skills-title">Skills</h2>
@@ -233,5 +235,15 @@ skillCategories.forEach(category => {
   observer.observe(category);
 });
 </script>
+
+      <script>
+function openMenu() {
+  document.getElementById("sidePanel").style.left = "0";
+}
+
+function closeMenu() {
+  document.getElementById("sidePanel").style.left = "-250px";
+}
+      </script>
 </body>
 </html>
