@@ -54,6 +54,28 @@
 
         </div>
     </section>
+    <!-- Hamburger -->
+<div class="hamburger" onclick="openMenu()">☰</div>
+
+<!-- Side Panel -->
+<div class="side-panel" id="sidePanel">
+  <span class="close-btn" onclick="closeMenu()">×</span>
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="skills.html" onclick="closeMenu()">Skills</a>
+  <a href="projects.html" onclick="closeMenu()">Projects</a>
+  <a href="journey.html" onclick="closeMenu()">Journey</a>
+  <a href="contact.html" onclick="closeMenu()">Contact</a>
+</div>
+    <script>
+function openMenu() {
+  document.getElementById("sidePanel").style.left = "0";
+}
+
+function closeMenu() {
+  document.getElementById("sidePanel").style.left = "-250px";
+}
+    </script>
 
 </body>
 </html>
