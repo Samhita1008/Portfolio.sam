@@ -32,48 +32,59 @@ h3 {
   margin-top: 20px;
 }
 
-/* =========================
-   SIDEBAR / HAMBURGER
-========================= */
+/* ===== HAMBURGER ===== */
 
 .hamburger {
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: 25px;
+  left: 25px;
   font-size: 28px;
+  color: #22d3ee;
   cursor: pointer;
-  z-index: 10000;
+  z-index: 1000;
+  transition: 0.3s ease;
 }
 
+.hamburger:hover {
+  transform: scale(1.1);
+  color: #67e8f9;
+}
+
+/* ===== SIDE PANEL ===== */
+
 .side-panel {
+  height: 100%;
+  width: 250px;
   position: fixed;
   top: 0;
   left: -250px;
-  width: 250px;
-  height: 100%;
-  background-color: #111;
-  padding-top: 60px;
-  transition: 0.3s;
-  z-index: 9999;
+  background-color: #111827;
+  padding-top: 80px;
+  transition: 0.4s ease;
+  z-index: 999;
 }
 
 .side-panel a {
   display: block;
   padding: 15px 25px;
-  color: #00ff00;
   text-decoration: none;
+  color: #e2e8f0;
+  font-size: 18px;
+  transition: 0.3s;
 }
 
 .side-panel a:hover {
-  background-color: #1a1a1a;
+  background-color: #1e293b;
+  color: #22d3ee;
 }
 
 .close-btn {
   position: absolute;
-  top: 15px;
+  top: 20px;
   right: 20px;
   font-size: 28px;
   cursor: pointer;
+  color: #22d3ee;
 }
 
 /* ===== ABOUT SECTION ===== */
