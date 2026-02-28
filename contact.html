@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Samhita</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body>
 
+  <!-- Hamburger -->
+  <div class="hamburger" onclick="openMenu()">☰</div>
+
+  <!-- Side Panel -->
+  <div class="side-panel" id="sidePanel">
+    <span class="close-btn" onclick="closeMenu()">×</span>
+    <a href="index.html" onclick="closeMenu()">Home</a>
+    <a href="about.html" onclick="closeMenu()">About</a>
+    <a href="skills.html" onclick="closeMenu()">Skills</a>
+    <a href="projects.html" onclick="closeMenu()">Projects</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+  </div>
+
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <p>Let’s connect! Reach out via any of the platforms below.</p>
+
+    <div class="contact-icons">
+      <a href="https://github.com/yourusername" target="_blank" class="github">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" class="linkedin">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://yourportfolio.com" target="_blank" class="website">
+        <i class="fas fa-globe"></i>
+      </a>
+      <a href="https://instagram.com/yourusername" target="_blank" class="instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="mailto:samhita@email.com" class="email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="tel:+91XXXXXXXXXX" class="phone">
+        <i class="fas fa-phone"></i>
+      </a>
+      <a href="https://freelanceplatform.com/yourprofile" target="_blank" class="freelance">
+        <i class="fas fa-briefcase"></i>
+      </a>
+    </div>
+  </section>
+
+  <script src="type.js"></script>
+</body>
+          </html>
