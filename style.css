@@ -438,49 +438,58 @@ h3 {
   background-color: #000; /* pitch black */
   padding: 100px 10%;
   text-align: center;
-  color: #cbd5e1; /* softer white for readability */
+  color: #B0B0B0; /* light gray text */
 }
 
 .contact h2 {
   font-size: 40px;
   margin-bottom: 15px;
-  color: #22d3ee; /* cyan glow-like color */
+  color: #f97316; /* orange for heading */
   letter-spacing: 1px;
 }
 
 .contact p {
   margin-bottom: 50px;
   font-size: 16px;
-  color: #94a3b8; /* light gray text */
+  color: #B0B0B0; /* light gray */
 }
 
 .contact-icons {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
-.contact-icons a {
+.icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-wrapper a {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 70px;
   height: 70px;
-  background: #111;
   border-radius: 50%;
+  background: #111;
   font-size: 24px;
   color: #fff;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
+  box-shadow: 0 0 10px rgba(255,165,0,0.3);
+  text-decoration: none;
 }
 
-.contact-icons a:hover {
-  transform: translateY(-5px) scale(1.1);
-  box-shadow: 0 0 25px rgba(34, 211, 238, 0.7);
+/* Label below icons */
+.icon-wrapper span {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #B0B0B0; /* light gray text */
 }
 
-/* Brand Colors Glow */
+/* Hover effects with brand colors */
 .github:hover { color: #fff; box-shadow: 0 0 20px #333; }
 .linkedin:hover { color: #0a66c2; box-shadow: 0 0 20px #0a66c2; }
 .website:hover { color: #facc15; box-shadow: 0 0 20px #facc15; }
@@ -495,15 +504,15 @@ h3 {
   50% { transform: translateY(-8px); }
 }
 
-.contact-icons a {
+.icon-wrapper a {
   animation: float 3s ease-in-out infinite;
 }
 
 /* Stagger animation */
-.contact-icons a:nth-child(1) { animation-delay: 0s; }
-.contact-icons a:nth-child(2) { animation-delay: 0.2s; }
-.contact-icons a:nth-child(3) { animation-delay: 0.4s; }
-.contact-icons a:nth-child(4) { animation-delay: 0.6s; }
-.contact-icons a:nth-child(5) { animation-delay: 0.8s; }
-.contact-icons a:nth-child(6) { animation-delay: 1s; }
-.contact-icons a:nth-child(7) { animation-delay: 1.2s; }
+.icon-wrapper:nth-child(1) { animation-delay: 0s; }
+.icon-wrapper:nth-child(2) { animation-delay: 0.2s; }
+.icon-wrapper:nth-child(3) { animation-delay: 0.4s; }
+.icon-wrapper:nth-child(4) { animation-delay: 0.6s; }
+.icon-wrapper:nth-child(5) { animation-delay: 0.8s; }
+.icon-wrapper:nth-child(6) { animation-delay: 1s; }
+.icon-wrapper:nth-child(7) { animation-delay: 1.2s; }
